@@ -112,4 +112,15 @@ instance Holed Nat where
 Now that this is defined we should be able to use rankntypes to generalize functions
 for:  1.) Listing all hole names in unfinished terms including co-induction
       2.) Construct terms monadicly from the ground up using holes.
+
+
+* (Rough Algorithm for HDD)
+
+1.) list holes in the term(include their type using the functions in Data.Data)
+2.) select hole to fill(by name)
+3.) from the holes AST type, list the possible hole fits
+4.) programmer selects hole fit from list
+5.) hole is filled
+6.) if holes are still present then goto (1.)
+
 -}
